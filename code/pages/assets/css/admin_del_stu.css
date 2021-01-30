@@ -1,0 +1,42 @@
+span {
+  margin-left: -10px;
+}
+
+.sidebar .nav-item .nav-link span {
+  margin-left: 5px;
+}
+
+.text-center.text-info.bg-light.border-white.shadow-sm.align-items-center {
+  width: 50%;
+  height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+
+.btn.btn-success.text-left.shadow-sm {
+  position: relative;
+  top: 30px;
+  border-radius: 10%;
+}
+
+.btn.btn-danger.shadow-sm {
+  position: relative;
+  top: 30px;
+  border-radius: 10%;
+  margin-left: 10px;
+}
+
+.text-center.text-info.bg-light.border-white.align-items-center {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  height: 200px;
+}
+
+.shadow-sm.form-control.form-control-lg {
+  border-radius: 25px;
+}
+

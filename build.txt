@@ -1,0 +1,39 @@
+BUILD
+
+RD /S /Q classes
+MD classes
+"%JAVA%\bin\javac.exe"  -g -verbose -cp ".;%APACHE_HOME%\lib\servlet-api.jar;%APACHE_HOME%\lib\annotations-api.jar;%GMS%\lib\junit-4.12.jar;%GMS%\lib\hamcrest-core-1.3.jar;%APACHE_HOME%\lib\jsp-api.jar;lib\dom4j-2.1.1.jar;%APACHE_HOME%\lib\mysql-connector-java-5.1.48.jar" -d classes src\servlet\*.java src\servlet\action\*.java src\model\factory\*.java src\filter\*.java src\model\service\*.java src\model\po\*.java src\model\dao\*.java src\model\dbutil\*.java 
+IF ERRORLEVEL 1 GOTO BUILD_END
+CD ..
+"%JAVA%\bin\jar.exe" cvf gms.war *
+:BUILD_END
+
+
+RUN
+
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://localhost:8080/gms/pages/login.jsp
+
+DELOY
+
+
+@echo on
+IF NOT EXIST "gms.war" GOTO DEPLOY_NOWAR
+IF "%APACHE_HOME%" == "" GOTO DEPLOY_NOAPACHE
+copy "gms.war" "%APACHE_HOME%\webapps"
+GOTO DEPLOY_END
+rem
+rem NO WAR FILE
+rem
+:DEPLOY_NOWAR
+echo "gms.war not found" 
+GOTO DEPLOY_END
+rem
+rem NO APACHE ENVIRONMENT VARIABLE
+rem
+:DEPLOY_NOAPACHE
+echo "APACHE_HOME environment variable not found" 
+GOTO DEPLOY_END
+rem
+rem
+rem
+:DEPLOY_END

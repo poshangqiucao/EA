@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background: url(../img/bg2.png) no-repeat center 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+}
+
+h1,h3{
+    text-align: center;
+}
+#login_from{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 75px;
+    border:10px gray solid;
+} 
+
+.input_class{
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.code{
+    width: 125px;
+    height: 30px;
+}
+
+

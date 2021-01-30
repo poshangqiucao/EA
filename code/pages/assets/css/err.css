@@ -1,0 +1,13 @@
+.rounded-circle.bg-dark.border.border-danger.shadow-lg.d-inline {
+  position: relative;
+  top: 100px;
+}
+
+.text-center.text-danger.justify-content-center.align-items-center.align-content-center.align-self-center {
+  background-color: #f9f1ee;
+}
+
+.alert.alert-danger.text-center.shadow-sm {
+  margin-top: 100px;
+}
+

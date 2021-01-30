@@ -1,0 +1,85 @@
+span {
+  margin-left: -10px;
+}
+
+.sidebar .nav-item .nav-link span {
+  margin-left: 5px;
+}
+
+.text-center.text-info.bg-light.border-white.shadow-sm.align-items-center {
+  width: 50%;
+  height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+
+.btn.btn-success.text-left.shadow-sm {
+  position: relative;
+  top: 30px;
+  border-radius: 10%;
+}
+
+.btn.btn-danger.shadow-sm {
+  position: relative;
+  top: 30px;
+  border-radius: 10%;
+  margin-left: 10px;
+}
+
+.text-center.text-info.bg-light.border-white.align-items-center {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  height: 200px;
+}
+
+.shadow-sm.form-control.form-control-lg {
+  border-radius: 25px;
+}
+
+.shadow-sm.form-control {
+  border-radius: 25px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+.form-inline.text-monospace.text-center.text-success.shadow-sm.justify-content-center.align-items-center.align-content-center.justify-content-sm-center.justify-content-md-center.justify-content-lg-center.justify-content-xl-center {
+  margin: 5px 10px;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  margin-left: 20px;
+}
+
+.form-inline .form-group, .form-inline label {
+  margin: 10px;
+}
+
+.form-inline.text-monospace.text-center.text-success.shadow-sm.justify-content-center.align-items-center.align-content-center.justify-content-sm-center.justify-content-md-center.justify-content-lg-center.justify-content-xl-center {
+  margin: 10px 40px;
+}
+
+#update_group_desc {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  margin-top: 10px;
+}
+
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child), .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
+  margin: 0 auto;
+}
+
+.form-inline .form-control {
+  margin-left: 10px;
+}
+

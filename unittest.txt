@@ -1,0 +1,9 @@
+Build
+
+"%JAVA%\bin\javac.exe"  -g -verbose -cp ".;%GMS%\lib\junit-4.12.jar;%GMS%\lib\hamcrest-core-1.3.jar;%APACHE_HOME%\lib\mysql-connector-java-5.1.48.jar;%GMS%\classes" ut\TeacherDaoImplTest.java -d .
+
+
+Test
+
+
+"%JAVA%\bin\java.exe" -cp ".;%APACHE_HOME%\lib\mysql-connector-java-5.1.48-bin.jar;%GMS%\lib\junit-4.12.jar;%GMS%\lib\hamcrest-core-1.3.jar;%GMS%\classes" org.junit.runner.JUnitCore  SystemCoding.model.dao.TeacherDaoImplTest

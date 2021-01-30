@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<testelement class="org.apache.jmeter.testelement.TestPlan">
+<property name="TestPlan.functional_mode">false</property>
+<property name="TestElement.test_class">org.apache.jmeter.testelement.TestPlan</property>
+<property name="TestElement.gui_class">org.apache.jmeter.control.gui.TestPlanGui</property>
+<collection name="TestPlan.thread_groups" class="java.util.LinkedList"></collection>
+<property name="TestElement.name">Badboy Test Plan</property>
+<testelement name="TestPlan.user_defined_variables" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.gui_class">org.apache.jmeter.config.gui.ArgumentsPanel</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList"></collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.threads.ThreadGroup">
+<property name="TestElement.test_class">org.apache.jmeter.threads.ThreadGroup</property>
+<property name="TestElement.gui_class">org.apache.jmeter.threads.gui.ThreadGroupGui</property>
+<property name="TestElement.name">Thread Group</property>
+<testelement name="ThreadGroup.main_controller" class="org.apache.jmeter.control.LoopController">
+<property name="LoopController.continue_forever">false</property>
+<property name="TestElement.test_class">org.apache.jmeter.control.LoopController</property>
+<property name="LoopController.loops">1</property>
+<property name="TestElement.gui_class">org.apache.jmeter.control.gui.LoopControlPanel</property>
+<property name="TestElement.name">Loop Controller</property>
+</testelement>
+<property name="ThreadGroup.num_threads">1</property>
+<property name="ThreadGroup.ramp_time">1</property>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.CookieManager">
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.control.CookieManager</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.CookiePanel</property>
+<property name="TestElement.name">HTTP Cookie Manager</property>
+<collection name="CookieManager.cookies" class="java.util.ArrayList"></collection>
+</testelement>
+</node>
+<node>
+<testelement class="org.apache.jmeter.modifiers.UserParameters">
+<property name="TestElement.test_class">org.apache.jmeter.modifiers.UserParameters</property>
+<property name="TestElement.gui_class">org.apache.jmeter.modifiers.gui.UserParametersGui</property>
+<property name="TestElement.name">User Parameters</property>
+<property name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property name="TestElement.per_iteration" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<collection name="UserParameters.names" class="java.util.ArrayList">
+<property name="VIEWSTATE">VIEWSTATE</property><property name="jsessionid">jsessionid</property></collection>
+<collection name="UserParameters.thread_values" class="java.util.ArrayList">
+<collection name="" class="java.util.ArrayList">
+<property name=""></property><property name=""></property></collection>
+</collection>
+</testelement>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E)</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">User-Agent</property>
+</testelement>
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Accept</property>
+</testelement>
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">zh-Hans-CN,zh-Hans;q=0.5</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Accept-Language</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+<node>
+<testelement class="org.apache.jmeter.control.LoopController"><Id>2</Id>
+<property name="TestElement.test_class">org.apache.jmeter.control.LoopController</property>
+<property name="TestElement.gui_class">org.apache.jmeter.control.gui.LoopControlPanel</property>
+<property name="TestElement.name">Step 1</property>
+<property name="LoopController.loops">1</property>
+<property name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property name="LoopController.continue_forever" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/pages/login.jsp</property>
+<property name="TestElement.name">http://localhost/gms/pages/login.jsp</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">GET</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">file:///C:/Program%20Files%20(x86)/Badboy/html/start.html</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/LoginServlet</property>
+<property name="TestElement.name">http://localhost/gms/LoginServlet</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">POST</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">201701</property>
+<property name="Argument.name">tea_id</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">as</property>
+<property name="Argument.name">tea_password</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value"></property>
+<property name="Argument.name">code</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">http://localhost:8080/gms/pages/login.jsp</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">application/x-www-form-urlencoded</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Content-Type</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/AddGdAction.action</property>
+<property name="TestElement.name">http://localhost/gms/AddGdAction.action</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">POST</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">2017210316</property>
+<property name="Argument.name">stu_id</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">asas</property>
+<property name="Argument.name">grade_name</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">43</property>
+<property name="Argument.name">grade_normal</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">54</property>
+<property name="Argument.name">grade_middle</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">65</property>
+<property name="Argument.name">grade_end</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">http://localhost:8080/gms/pages/tea_main.jsp</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">application/x-www-form-urlencoded</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Content-Type</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/pages/tea_update.jsp</property>
+<property name="TestElement.name">http://localhost/gms/pages/tea_update.jsp</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">GET</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">http://localhost:8080/gms/pages/tea_main.jsp</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/UpGdAction.action</property>
+<property name="TestElement.name">http://localhost/gms/UpGdAction.action</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">POST</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">2017210316</property>
+<property name="Argument.name">stu_id</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">asas</property>
+<property name="Argument.name">grade_name</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">54</property>
+<property name="Argument.name">grade_normal</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">65</property>
+<property name="Argument.name">grade_middle</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">76</property>
+<property name="Argument.name">grade_end</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">http://localhost:8080/gms/pages/tea_update.jsp</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">application/x-www-form-urlencoded</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Content-Type</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/pages/tea_query.jsp</property>
+<property name="TestElement.name">http://localhost/gms/pages/tea_query.jsp</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">GET</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">http://localhost:8080/gms/pages/tea_update.jsp</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/pages/tea_del.jsp</property>
+<property name="TestElement.name">http://localhost/gms/pages/tea_del.jsp</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">GET</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">http://localhost:8080/gms/pages/tea_query.jsp</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.sampler.HTTPSampler">
+<property name="HTTPSampler.mimetype"></property>
+<property name="HTTPSampler.follow_redirects">true</property>
+<property name="HTTPSampler.domain">localhost</property>
+<property name="HTTPSampler.protocol">http</property>
+<property name="HTTPSampler.FILE_FIELD"></property>
+<property name="HTTPSampler.FILE_NAME"></property>
+<property name="HTTPSampler.path">/gms/DelGdAction.action</property>
+<property name="TestElement.name">http://localhost/gms/DelGdAction.action</property>
+<property name="HTTPSampler.port">8080</property>
+<property name="HTTPSampler.method">POST</property>
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.control.gui.HttpTestSampleGui</property>
+<property name="TestElement.test_class">org.apache.jmeter.protocol.http.sampler.HTTPSampler</property>
+<property name="HTTPSampler.use_keepalive">true</property>
+<collection name="AbstractSampler.assertions" class="java.util.ArrayList"></collection>
+<testelement name="HTTPsampler.Arguments" class="org.apache.jmeter.config.Arguments">
+<property name="TestElement.gui_class">org.apache.jmeter.protocol.http.gui.HTTPArgumentsPanel</property>
+<property name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+<property name="TestElement.name">Argument List</property>
+<collection name="Arguments.arguments" class="java.util.ArrayList">
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">2017210316</property>
+<property name="Argument.name">stu_id</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+<testelement class="org.apache.jmeter.protocol.http.util.HTTPArgument">
+<property name="HTTPArgument.always_encode">true</property>
+<property name="Argument.value">asas</property>
+<property name="Argument.name">grade_name</property>
+<property name="Argument.metadata">=</property>
+<property name="Argument.use_equals">true</property>
+</testelement>
+</collection>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.protocol.http.control.HeaderManager">
+<property xml:space="preserve" name="TestElement.gui_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.gui.HeaderPanel</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">HTTP Header Manager</property>
+<property xml:space="preserve" name="TestElement.enabled" propType="org.apache.jmeter.testelement.property.BooleanProperty">true</property>
+<property xml:space="preserve" name="TestElement.test_class" propType="org.apache.jmeter.testelement.property.StringProperty">org.apache.jmeter.protocol.http.control.HeaderManager</property>
+<collection name="HeaderManager.headers" propType="org.apache.jmeter.testelement.property.CollectionProperty" class="java.util.ArrayList">
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">http://localhost:8080/gms/pages/tea_del.jsp</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Referer</property>
+</testelement>
+<testelement name="" class="org.apache.jmeter.protocol.http.control.Header">
+<property xml:space="preserve" name="Header.value" propType="org.apache.jmeter.testelement.property.StringProperty">application/x-www-form-urlencoded</property>
+<property xml:space="preserve" name="TestElement.name" propType="org.apache.jmeter.testelement.property.StringProperty">Content-Type</property>
+</testelement>
+</collection>
+</testelement>
+</node>
+</node>
+</node>
+</node>
+</node>
